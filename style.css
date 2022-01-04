@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    --strong-cyan: hsl(172, 67%, 45%);
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --dark-grayish-lighter-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --light-grayish-lighter-cyan: hsl(189, 41%, 97%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    padding: 160px 260px 238px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--light-grayish-cyan);
+}
+
+.app-title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    color: var(--very-dark-cyan);
+    margin-bottom: 80px;
+}
+
+#tip {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 30px;
+    gap: 50px;
+    font-family: inherit;
+}
+
+#tip .tip-left {
+    padding: 20px 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#tip .tip-left .tip-left-top,
+#tip .tip-left .tip-left-mid,
+#tip .tip-left .tip-left-bot {
+    width: 100%;
+}
+
+#tip .tip-left .tip-bill,
+#tip .tip-left .tip-bill-error,
+#tip .tip-left .tip-options,
+#tip .tip-left .tip-people,
+#tip .tip-left .tip-people-error {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--very-dark-cyan);
+    margin-bottom: 10px;
+}
+
+#tip .tip-left .tip-bill-top,
+#tip .tip-left .tip-people-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#tip .tip-left .tip-bill-error,
+#tip .tip-left .tip-people-error {
+    color: #d35353;
+    display: none;
+}
+
+#tip .tip-left .tip-bill-box input,
+#tip .tip-left .tip-people-box input {
+    width: 100%;
+    height: 50px;
+    padding: 10px 15px;
+    background: url('images/icon-dollar.svg') no-repeat 15px 15px;
+    background-color: var(--light-grayish-lighter-cyan);
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 5px;
+    color: var(--dark-grayish-lighter-cyan);
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    text-align: right;
+}
+
+#tip .tip-left .tip-people-box input {
+    background: url('images/icon-person.svg') no-repeat 15px 15px;
+    background-color: var(--light-grayish-lighter-cyan);
+}
+
+#tip .tip-left .tip-bill-box input:focus,
+#tip .tip-left .tip-people-box input:focus {
+    outline: var(--very-dark-cyan);
+    color: var(--very-dark-cyan);
+    font-weight: 700;
+}
+
+#tip .tip-left .tip-bill-box input::-webkit-outer-spin-button,
+#tip .tip-left .tip-bill-box input::-webkit-inner-spin-button,
+#tip .tip-left .tip-people-box input::-webkit-inner-spin-button,
+#tip .tip-left .tip-people-box input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#tip .tip-left .tip-options-box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+#tip .tip-left .tip-options-box > * {
+    height: 48px;
+    border: none;
+    background-color: var(--very-dark-cyan);
+    color: #fff;
+    font-family: 'Space Mono', monospace;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+#tip .tip-left .tip-options-box .tip-option.active {
+    color: var(--very-dark-cyan);
+    background-color: var(--strong-cyan);
+}
+
+#tip .tip-left .tip-options-box #tip-input {
+    background-color: var(--light-grayish-lighter-cyan);
+    color: var(--very-dark-cyan);
+    padding: 0 10px;
+    text-align: right;
+}
+
+#tip .tip-left .tip-options-box #tip-input:focus {
+    outline: var(--strong-cyan);
+}
+
+#tip .tip-left .tip-options-box #tip-input::placeholder {
+    text-align: center;
+    color: var(--very-dark-cyan);
+    font-weight: 700;
+}
+
+#tip .tip-left .tip-options-box #tip-input::-webkit-outer-spin-button,
+#tip .tip-left .tip-options-box #tip-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#tip .tip-right {
+    height: 100%;
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--very-dark-cyan);
+    border-radius: 15px;
+}
+
+#tip .tip-right .tip-right-top,
+#tip .tip-right .tip-right-mid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+#tip .tip-right-top div p:first-child,
+#tip .tip-right-mid div p:first-child {
+    color: #fff;
+}
+
+#tip .tip-right-top div p:last-child,
+#tip .tip-right-mid div p:last-child {
+    color: var(--dark-grayish-lighter-cyan);
+    font-size: 14px;
+}
+
+#tip .tip-right-top #tip-amount,
+#tip .tip-right-mid #tip-total {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -.2px;
+    color: var(--strong-cyan);
+}
+
+#tip .tip-right .tip-right-bot {
+    width: 100%;
+}
+
+#tip .tip-right .tip-right-bot button {
+    width: 100%;
+    height: 50px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--light-grayish-cyan);
+    color: var(--very-dark-cyan);
+    opacity: 0.2;
+    cursor: pointer;
+    transition: .3s all ease;
+}
+
+#tip .tip-right .tip-right-bot button:hover {
+    opacity: 1;
+}
+
+@media(max-width: 375px) {
+    main {
+        padding: 50px 0 0 0;
+    }
+    .app-title {
+        margin-bottom: 35px;
+    }
+    #tip {
+        grid-template-columns: 1fr;
+        padding: 25px;
+        gap: 25px;
+    }
+    #tip .tip-left {
+        padding: 0;
+    }
+    #tip .tip-left .tip-left-top,
+    #tip .tip-left .tip-left-mid {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    #tip .tip-left .tip-left-bot {
+        margin-bottom: 0;
+    }
+    #tip .tip-left .tip-options-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #tip .tip-right {
+        padding: 25px;
+    }
+    #tip .tip-right-top #tip-amount,
+    #tip .tip-right-mid #tip-total {
+        font-size: 2rem;
+    }
+}

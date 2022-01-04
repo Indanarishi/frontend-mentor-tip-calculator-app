@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Tip Calculator App</title>
+</head>
+<body>
+    
+    <main>
+        <h1 class="app-title">Spli<br>tter</h1>
+        <section id="tip">
+            <div class="tip-left">
+                <div class="tip-left-top">
+                    <div class="tip-bill-top">
+                        <p class="tip-bill">Bill</p>
+                        <p class="tip-bill-error">Can't be zero</p>
+                    </div>
+                    <div class="tip-bill-box">
+                        <input type="number" name="bill" id="bill" placeholder="0">
+                    </div>
+                </div>
+                <div class="tip-left-mid">
+                    <p class="tip-options">Select Tip %</p>
+                    <div class="tip-options-box">
+                        <button class="tip-option">5%</button>
+                        <button class="tip-option">10%</button>
+                        <button class="tip-option">15%</button>
+                        <button class="tip-option">25%</button>
+                        <button class="tip-option">50%</button>
+                        <input type="number" name="tip" id="tip-input" placeholder="Custom" min="5" max="100">
+                    </div>
+                </div>
+                <div class="tip-left-bot">
+                    <div class="tip-people-top">
+                        <p class="tip-people">Number of People</p>
+                        <p class="tip-people-error">Can't be zero</p>
+                    </div>
+                    <div class="tip-people-box">
+                        <input type="number" name="people" id="people" placeholder="0" min="1" max="100">
+                    </div>
+                </div>
+            </div>
+            <div class="tip-right">
+                <div>
+                    <div class="tip-right-top">
+                        <div>
+                            <p>Tip Amount</p>
+                            <p>/ person</p>
+                        </div>
+                        <p id="tip-amount">
+                            $0.00
+                        </p>
+                    </div>
+                    <div class="tip-right-mid">
+                        <div>
+                            <p>Total</p>
+                            <p>/ person</p>
+                        </div>
+                        <p id="tip-total">
+                            $0.00
+                        </p>
+                    </div>
+                </div>
+                <div class="tip-right-bot">
+                    <button class="reset-btn" disabled>
+                        Reset
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

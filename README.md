@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: https://www.frontendmentor.io/solutions/tip-calculator-app-with-vanilla-javascript-GzasVD9JB
 - Live Site URL: https://wizardly-wescoff-2c14c5.netlify.app/
 
 ### Built with
